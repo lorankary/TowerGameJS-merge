@@ -18,7 +18,7 @@ class Bullet{
   
     var ctx = towerGame.context;
     ctx.save();
-    ctx.translate(this.loc.vx, this.loc.vy);
+    ctx.translate(this.loc.x, this.loc.y);
     ctx.rotate(this.angle);
     ctx.drawImage(this.img, -this.img.width/2,-this.img.height/2);
 
@@ -26,8 +26,8 @@ class Bullet{
   }
 
   update(){
-    this.loc.vy += Math.sin(this.angle)*this.speed;
-    this.loc.vx += Math.cos(this.angle)*this.speed;
+    this.loc.y += Math.sin(this.angle)*this.speed;
+    this.loc.x += Math.cos(this.angle)*this.speed;
 
   }
 }//  end Bullet class
